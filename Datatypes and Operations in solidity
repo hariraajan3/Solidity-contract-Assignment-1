@@ -1,0 +1,36 @@
+//SPDX-License-Identifier: MIT
+pragma solidity >=0.6.12 <0.9.0;
+contract datatypes{
+    int public temperatrue=-25;
+    uint public age=18;
+    string public text;
+    int public number;
+    struct Person{
+        bool vote;
+        string name;
+        int age;
+    }
+    enum Color {Red,Green,Blue}
+    Color public FavouriteColor;
+    Person public person;
+    constructor()  {
+        number=2 days;
+        text="Hi everyone, So it's Gitathon 1.0 ";
+        FavouriteColor=Color.Green;
+        person.name="Hari";
+        person.age=18;
+        person.vote=true;
+    }
+    function operation(uint a,uint b)public pure returns(uint[5] memory){
+    uint[5] memory results;
+    results [0]=a+b;
+    results [1]=a*b;
+    results [2]=a-b;
+    results [3]=a/b;
+    return results;
+    }
+    function concentation(string memory a,string memory b)public pure returns(string memory){
+        return string(abi.encodePacked(a,b));
+    }
+
+}
